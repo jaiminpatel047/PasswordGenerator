@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      let localTheme = localStorage.getItem('PasswordTheme');
+
+     if(localTheme === "dark"){
+      document.documentElement.setAttribute('data-theme', "dark");
+     }
+    </script>
+
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Password Generator</title>
+</head>
+<body>
+    <section id="container">
+        <div id="heading">
+          <h1>Password Generator</h1>
+          <p id="passwordStrength">passwordStrength</p>
+          <p id="passwordStrengthRequired">passwordStrengthRequired</p>
+        </div>
+        <div id="generationgSection">
+            <input type="text" id="showPassword" readonly>
+            <div id="copyBtn"><i class="fa-regular fa-copy"></i></div>
+        </div>
+        <div id="btnSection">
+            <div class="range-slider">
+                <input class="range-slider__range" type="range" value="1" min="1" max="30" id="passwordGenerateSlides">
+                <span class="range-slider__value">0</span>
+              </div>
+        </div>
+        <div id="requementSection">
+            <div class="row">
+                <label for="lowercase" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="lowercase">
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+                      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Lowercase</span>
+                  </label>
+            </div>
+            <div class="row">
+                <label for="uppercase" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="uppercase">
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+                      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Uppercase</span>
+                  </label>
+            </div>
+            <div class="row">
+                <label for="numbers" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="numbers">
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+                      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Numbers</span>
+                  </label>
+            </div>
+
+            <div class="row">
+                <label for="symbols" class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="symbols">
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+                      <path class="tick" stroke="#6EA340" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9" />
+                    </svg>
+                    <span class="checkbox__label">Symbols</span>
+                  </label>
+            </div>
+             
+        </div>
+    </section>
+    <div class="copyright"><p>Made With <a href="#">❤️</a> By <a href="https://jaimindev.blogspot.com">Jaimin Patel</a></p></div>
+    <button type="button" class="theme" id="modeBtn">
+      <span><i class="fa-solid fa-moon"></i></span>
+    </button>
+</body>
+</html>
+
+<script src="./app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
